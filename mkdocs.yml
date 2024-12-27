@@ -1,0 +1,78 @@
+site_name: huyle.dev
+site_url: https://huyle1097.github.io
+theme:
+  name: material
+  font:
+    text: Nunito
+    code: Red Hat Mono
+  logo: assets/code.png
+  favicon: assets/favicon-32x32.png
+  features:
+    - navigation.footer
+    - navigation.tabs
+    - navigation.sections
+    - toc.integrate
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.tabs.link
+    - content.code.copy
+  palette: 
+    # Palette toggle for automatic mode
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/brightness-auto
+        name: Switch to light mode
+
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default 
+      primary: indigo
+      accent: red
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: teal
+      accent: deep orange
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to system preference
+
+markdown_extensions:
+  - attr_list
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.arithmatex:
+      generic: true
+  - admonition
+  - pymdownx.details
+  - pymdownx.mark
+  - footnotes
+
+extra:
+  social:
+    - icon: fontawesome/brands/github-alt
+      link: https://github.com/huyle1097
+    - icon: fontawesome/brands/linkedin
+      link: https://linkedin.com/in/huyle1097
+
+copyright: |
+  &copy; 2024 <a href="https://github.com/huyle1097"  target="_blank" rel="noopener">Huy Le</a>
